@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Gift Muse | Personalized Gifts</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@400;500&display=swap">
+<style>
+:root{--bg:#FFF9F5;--blush:#F8D7DA;--lav:#E6E0F8;--mint:#DFF3EA;--text:#4A3440;--btn:#C97B8B;--gold:#D9B382;--card:#fff;--line:#eadbd6;--sh:0 10px 28px rgba(74,52,64,.12);--gtext:#8a6a3d;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1f26;--blush:#4a2f37;--lav:#393250;--mint:#2b4038;--text:#f6e9ee;--card:#37282f;--line:#4d3b44;--gtext:#e3c48f;--sh:0 10px 28px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#2a1f26;--blush:#4a2f37;--lav:#393250;--mint:#2b4038;--text:#f6e9ee;--card:#37282f;--line:#4d3b44;--gtext:#e3c48f;--sh:0 10px 28px rgba(0,0,0,.4);color-scheme:dark}
+html{height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.7 'Jost',system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3,.logo{font-family:'Cormorant Garamond',Georgia,serif;color:var(--text);margin:0;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+.eyebrow{color:var(--gtext);letter-spacing:.18em;text-transform:uppercase;font-size:12px;font-weight:500}
+.head{text-align:center;margin-bottom:40px}.head h2{font-size:clamp(32px,4vw,44px);margin-top:6px}
+.head p{max-width:560px;margin:10px auto 0}
+.btn{display:inline-block;padding:11px 26px;border-radius:40px;font:500 15px 'Jost',sans-serif;border:2px solid var(--btn);background:var(--btn);color:#fff;cursor:pointer;transition:.2s}
+.btn:hover{filter:brightness(.92)}.btn.o{background:transparent;color:var(--text);border-color:var(--btn)}.btn.o:hover{background:var(--blush)}.btn.sm{padding:8px 20px;font-size:14px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;flex-wrap:wrap}
+.logo{font-size:28px;font-weight:700}.logo i{color:var(--btn)}
+.links{display:flex;gap:28px;font-size:15px}.links a{padding:4px 0;border-bottom:2px solid transparent}.links a.on,.links a:hover{border-color:var(--gold)}
+.hero{background:linear-gradient(120deg,var(--blush),var(--lav));padding:48px 0}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:24px;align-items:center}
+.hero h1{font-size:clamp(40px,5.5vw,66px);margin:12px 0 16px}
+.hero p{font-size:18px;max-width:440px;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero svg{width:100%;height:auto;border-radius:26px;box-shadow:var(--sh)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:var(--card);border-radius:20px;box-shadow:var(--sh);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+.card .img{background:linear-gradient(160deg,var(--blush),var(--lav));aspect-ratio:5/4;display:grid;place-items:center}
+.card .img svg{width:68%;filter:drop-shadow(0 8px 10px rgba(74,52,64,.22))}
+.card .body{padding:20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:23px}.card p{margin:0;font-size:14.5px}
+.opt{font-size:13px;background:var(--mint);color:var(--text);border-radius:20px;padding:2px 12px;align-self:flex-start}
+.price{color:var(--gtext);font-weight:500;font-size:18px}
+.card .btn{margin-top:auto;text-align:center}
+.alt{background:var(--lav)}.mintbg{background:var(--mint)}
+.steps,.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.num{width:60px;height:60px;border-radius:50%;background:var(--card);border:2px solid var(--gold);font:700 28px 'Cormorant Garamond',serif;display:grid;place-items:center;margin:0 auto 12px}
+.steps h3,.why h3{font-size:21px}.steps p{margin:4px 0 0;font-size:15px}
+.why>div{background:var(--card);border-radius:20px;padding:28px 18px;box-shadow:var(--sh)}
+.ic{width:52px;height:52px;color:var(--btn);margin:0 auto 10px;display:block}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev blockquote{margin:0;background:var(--card);padding:26px;border-radius:20px;box-shadow:var(--sh)}
+.stars{color:#b9852b;letter-spacing:4px;font-size:18px}
+.rev p{font:600 21px/1.35 'Cormorant Garamond',serif;margin:10px 0}.rev cite{font-style:normal;font-size:14px}
+.pagehead{background:linear-gradient(120deg,var(--blush),var(--lav));text-align:center;padding:60px 0}
+.pagehead h1{font-size:clamp(36px,5vw,56px)}.pagehead p{max-width:560px;margin:10px auto 0}
+.filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:34px}
+.filters button{font:500 14px 'Jost',sans-serif;padding:9px 18px;border-radius:30px;border:1.5px solid var(--btn);background:var(--card);color:var(--text);cursor:pointer}
+.filters button.on{background:var(--btn);color:#fff}
+.pd{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+.main{background:linear-gradient(160deg,var(--blush),var(--lav));border-radius:24px;aspect-ratio:1;display:grid;place-items:center;box-shadow:var(--sh)}
+.main svg{width:72%}.thumbs{display:flex;gap:12px;margin-top:14px}
+.thumbs button{flex:1;background:var(--lav);border:2px solid transparent;border-radius:14px;padding:8px;cursor:pointer}.thumbs button.on{border-color:var(--btn)}
+.thumbs svg{width:100%}
+.pd h1{font-size:44px}.pd .price{font-size:26px;margin:6px 0}
+.meta{background:var(--mint);border-radius:14px;padding:12px 16px;margin:14px 0;font-size:15px}
+form{display:grid;gap:14px}
+label{font-weight:500;font-size:14px;display:grid;gap:5px}
+input,select,textarea{font:400 16px 'Jost',sans-serif;padding:11px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--text);width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--btn);outline-offset:1px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.box{background:var(--card);border-radius:22px;padding:30px;box-shadow:var(--sh)}
+.ok{background:var(--mint);padding:12px 16px;border-radius:12px;font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chips span{background:var(--card);border:1.5px solid var(--gold);border-radius:30px;padding:8px 20px;font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.q{display:block;background:var(--card);border-radius:16px;padding:6px 20px;margin-bottom:12px;box-shadow:var(--sh)}
+.q summary{cursor:pointer;font:600 22px 'Cormorant Garamond',serif;padding:12px 0}.q p{margin:0 0 14px}
+.note{font-size:14px;text-align:center;margin-top:20px}
+footer{background:var(--text);color:#fbeff2;padding:52px 0 26px}
+footer .logo{color:#fff}footer h4{font:600 20px 'Cormorant Garamond',serif;color:var(--gold);margin:0 0 8px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:28px}footer ul{list-style:none;padding:0;margin:0}
+footer a:hover{color:var(--gold)}
+.soc{display:flex;gap:12px;margin-top:12px}.soc a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;color:var(--gold)}.soc svg{width:20px;height:20px}
+.disc{border-top:1px solid rgba(255,255,255,.2);margin-top:30px;padding-top:18px;text-align:center;font-size:14px}
+@media(max-width:900px){.grid,.rev{grid-template-columns:1fr 1fr}.steps,.why{grid-template-columns:1fr 1fr}.hero .wrap,.pd,.two{grid-template-columns:1fr}}
+@media(max-width:760px){.links{order:3;width:100%;justify-content:space-between;gap:8px;padding-bottom:8px;font-size:14px}footer .cols{grid-template-columns:1fr}section{padding:52px 0}}
+@media(max-width:560px){.grid,.rev,.steps,.why,.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.5c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8z"/></symbol>
+<symbol id="ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
+</defs></svg>
+<nav><div class="wrap">
+<a href="#home" class="logo">The Gift <i>Muse</i></a>
+<div class="links"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#personalize">Customize</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<a href="#shop" class="btn sm">Order Now</a>
+</div></nav>
+
+<main>
+<div id="pg-home">
+<header class="hero"><div class="wrap">
+<div><span class="eyebrow">Personalized Gifting</span><h1>A Gift as Unique as Your Story</h1>
+<p>Personalized mugs, photo frames, keepsakes, and curated gift hampers for every special moment.</p>
+<div class="cta"><a href="#shop" class="btn">Shop Gifts</a><a href="#personalize" class="btn o">Customize Yours</a></div></div>
+<svg viewBox="0 0 600 500" role="img" aria-label="Flat-lay of personalized gifts"><rect width="600" height="500" fill="#fbe9e6"/><rect x="30" y="40" width="540" height="420" rx="14" fill="#fff9f5" opacity=".7"/>
+<g transform="rotate(-6 150 150)"><rect x="50" y="50" width="200" height="170" rx="6" fill="#a9794f"/><rect x="64" y="64" width="172" height="142" fill="#f8efe3"/><rect x="78" y="78" width="144" height="114" fill="#F8D7DA"/><circle cx="150" cy="118" r="22" fill="#fff9f5"/><path d="M104 192q46-62 92 0z" fill="#fff9f5"/></g>
+<g transform="rotate(8 470 130)"><rect x="370" y="60" width="190" height="130" rx="4" fill="#fffaf2"/><text x="465" y="112" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="26" fill="#4A3440">With love,</text><path d="M405 135q30-14 60 0t60 0" stroke="#D9B382" fill="none" stroke-width="2"/><text x="465" y="170" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="18" fill="#a07a3c">Ayesha</text></g>
+<ellipse cx="300" cy="372" rx="100" ry="14" fill="#4A3440" opacity=".15"/><path d="M360 255q58 6 50 52t-62 46" stroke="#fff" stroke-width="17" fill="none"/><rect x="200" y="215" width="160" height="150" rx="16" fill="#fff" stroke="#eadfd3" stroke-width="2"/><ellipse cx="280" cy="216" rx="80" ry="13" fill="#f3ebe1"/><text x="280" y="296" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="38" fill="#b08a4c">Sara</text><path d="M236 312h88" stroke="#F8D7DA" stroke-width="3"/>
+<rect x="400" y="290" width="150" height="110" rx="6" fill="#e6b7c0"/><rect x="392" y="270" width="166" height="38" rx="6" fill="#F8D7DA"/><rect x="465" y="270" width="20" height="130" fill="#D9B382"/><path d="M475 270c-40-50-70-10-30 4zM475 270c40-50 70-10 30 4z" fill="#D9B382"/>
+<g transform="rotate(-14 90 380)"><circle cx="90" cy="320" r="14" fill="none" stroke="#D9B382" stroke-width="4"/><path d="M90 334v12" stroke="#D9B382" stroke-width="4"/><circle cx="90" cy="384" r="38" fill="#D9B382"/><text x="90" y="394" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="30" fill="#4A3440">A</text></g>
+<g stroke="#9c7a4f" stroke-width="2.5" fill="none"><path d="M170 450q40-80 100-120M190 455q20-70 60-110M155 445q10-60 20-100"/></g><g fill="#E6E0F8"><circle cx="270" cy="330" r="8"/><circle cx="250" cy="344" r="7"/><circle cx="178" cy="348" r="8"/></g><g fill="#DFF3EA"><circle cx="232" cy="352" r="7"/><circle cx="196" cy="372" r="6"/></g></svg>
+</div></header>
+<section><div class="wrap"><div class="head"><span class="eyebrow">Our Collection</span><h2>Featured Gifts</h2></div><div class="grid" id="feat"></div></div></section>
+<section class="mintbg"><div class="wrap"><div class="head"><h2>How It Works</h2></div><div class="steps"></div></div></section>
+<section><div class="wrap"><div class="head"><h2>Why Choose Us</h2></div><div class="why"></div></div></section>
+<section class="alt"><div class="wrap"><div class="head"><h2>Happy Customers</h2></div><div class="rev">
+<blockquote><div class="stars" aria-label="5 stars">★★★★★</div><p>The mug was even prettier than the preview. My sister loved it!</p><cite>Hira A., Lahore</cite></blockquote>
+<blockquote><div class="stars" aria-label="5 stars">★★★★★</div><p>Beautiful packaging and thoughtful details. It felt truly personal.</p><cite>Maryam K., Karachi</cite></blockquote>
+<blockquote><div class="stars" aria-label="5 stars">★★★★★</div><p>Our anniversary box arrived on time and looked luxurious.</p><cite>Usman &amp; Sana, Islamabad</cite></blockquote>
+</div></div></section>
+</div>
+
+<div id="pg-shop" hidden>
+<div class="pagehead"><div class="wrap"><h1>Find the Perfect Gift</h1><p>Personalized treasures for birthdays, weddings, Eid, graduations and more.</p></div></div>
+<section><div class="wrap"><div class="filters" id="filters"></div><div class="grid" id="shopgrid"></div></div></section>
+</div>
+
+<div id="pg-product" hidden><section><div class="wrap"><div class="pd">
+<div><div class="main" id="main"></div><div class="thumbs" id="thumbs"></div></div>
+<div><span class="eyebrow">Birthday · Couple Gifts</span><h1>Custom Photo Mug</h1><div class="price">Rs. 1,450</div>
+<p>A glossy white ceramic mug printed with your favorite photo and a name or message. Dishwasher safe, packed in a gift box.</p>
+<div class="meta"><b>Personalization:</b> name, photo, message<br><b>Delivery:</b> 3–5 working days after design approval</div>
+<form onsubmit="return done(this)"><label>Customer name<input required placeholder="Name for the mug"></label>
+<label>Photo upload<input type="file" accept="image/*"></label>
+<label>Message<textarea rows="3" placeholder="Short message to print"></textarea></label>
+<label>Preferred delivery date<input type="date"></label>
+<button class="btn">Order Now</button><div class="ok" hidden>Thank you! This is a demo form, so no order was sent.</div></form></div>
+</div></div></section>
+<section class="alt"><div class="wrap"><div class="head"><h2>You May Also Like</h2></div><div class="grid" id="related"></div></div></section>
+</div>
+
+<div id="pg-personalize" hidden>
+<div class="pagehead"><div class="wrap"><h1>Create a Gift They’ll Never Forget</h1><p>Tell us your idea and we’ll design it with you, step by step.</p></div></div>
+<section><div class="wrap"><div class="steps"></div></div></section>
+<section class="mintbg"><div class="wrap"><div class="head"><h2>Personalization Options</h2></div><div class="chips"><span>Name</span><span>Photo</span><span>Quote or message</span><span>Date</span><span>Favorite color</span><span>Gift wrapping</span><span>Handwritten card</span></div></div></section>
+<section><div class="wrap" style="max-width:720px"><div class="box"><h2 style="margin-bottom:16px">Customization Request</h2>
+<form onsubmit="return done(this)"><div class="row"><label>Name<input required></label><label>Email<input type="email" required></label></div>
+<div class="row"><label>Gift type<select><option>Mug</option><option>Photo frame</option><option>Keychain</option><option>Necklace</option><option>Gift hamper</option><option>Keepsake box</option></select></label>
+<label>Occasion<select><option>Birthday</option><option>Wedding</option><option>Eid</option><option>Graduation</option><option>Anniversary</option><option>Other</option></select></label></div>
+<label>Personalization text<input placeholder="Name, quote or date"></label>
+<label>Photo upload<input type="file" accept="image/*"></label>
+<label>Message<textarea rows="4"></textarea></label>
+<button class="btn">Submit Request</button><a class="btn o wa" target="_blank" rel="noopener" style="text-align:center">Send Request on WhatsApp</a>
+<div class="ok" hidden>Thank you! This is a demo form, so no request was sent.</div></form></div></div></section>
+</div>
+
+<div id="pg-about" hidden>
+<div class="pagehead"><div class="wrap"><h1>The Story Behind The Gift Muse</h1><p>We create thoughtful, personalized gifts that turn memories into meaningful keepsakes.</p></div></div>
+<section><div class="wrap" style="max-width:760px;text-align:center"><span class="eyebrow">Our Mission</span><h2 style="font-size:36px;margin-top:8px">To make every celebration more personal, beautiful, and unforgettable.</h2></div></section>
+<section class="alt"><div class="wrap"><div class="head"><h2>Our Values</h2></div><div class="why" id="vals"></div></div></section>
+<section><div class="wrap"><div class="head"><h2>Our Promise</h2></div><div class="rev">
+<blockquote><h3>Quality Materials</h3><p style="font:400 16px/1.6 Jost,sans-serif">Ceramics, woods and metals chosen to last long after the celebration.</p></blockquote>
+<blockquote><h3>Secure Packaging</h3><p style="font:400 16px/1.6 Jost,sans-serif">Every gift is wrapped with care and packed to arrive safely.</p></blockquote>
+<blockquote><h3>Customer Satisfaction</h3><p style="font:400 16px/1.6 Jost,sans-serif">You approve every design before we make it, so you’re always happy.</p></blockquote></div>
+<p class="note">The Gift Muse is a fictional business created for a Digital Marketing course project.</p></div></section>
+</div>
+
+<div id="pg-faq" hidden>
+<div class="pagehead"><div class="wrap"><h1>Frequently Asked Questions</h1></div></div>
+<section><div class="wrap" style="max-width:780px" id="faqs"></div></section>
+<section class="mintbg"><div class="wrap" style="max-width:560px;text-align:center"><h2>Get gift ideas and special offers</h2>
+<form onsubmit="return done(this)" style="margin-top:18px"><input type="email" required placeholder="Your email address" aria-label="Email"><button class="btn">Subscribe</button><div class="ok" hidden>Thanks for subscribing! (Demo only.)</div></form></div></section>
+</div>
+
+<div id="pg-contact" hidden>
+<div class="pagehead"><div class="wrap"><h1>Let’s Create Something Special</h1></div></div>
+<section><div class="wrap two">
+<div class="box"><form onsubmit="return done(this)"><label>Name<input required></label><div class="row"><label>Email<input type="email" required></label><label>Phone number<input type="tel"></label></div>
+<div class="row"><label>Occasion<select><option>Birthday</option><option>Wedding</option><option>Eid</option><option>Graduation</option><option>Anniversary</option></select></label><label>Gift type<select><option>Mug</option><option>Photo frame</option><option>Keychain</option><option>Necklace</option><option>Hamper</option><option>Keepsake box</option></select></label></div>
+<label>Message<textarea rows="4"></textarea></label><button class="btn">Send Message</button><div class="ok" hidden>Thank you! This is a demo form, so no message was sent.</div></form></div>
+<div><a class="btn wa" target="_blank" rel="noopener">Chat on WhatsApp</a>
+<div class="meta" style="margin-top:22px;background:var(--lav)"><b>Email:</b> hello@thegiftmuse.com<br><b>Instagram:</b> @TheGiftMuse<br><b>Facebook:</b> The Gift Muse<br><b>Hours:</b> Monday to Saturday, 10:00 AM to 8:00 PM</div>
+<p class="note" style="text-align:left">The Gift Muse is a fictional business created for a Digital Marketing course project.</p></div>
+</div></section>
+</div>
+</main>
+
+<footer><div class="wrap"><div class="cols">
+<div><div class="logo">The Gift Muse</div><p style="margin:6px 0 0">Personalized gifts for every special moment.</p><div class="soc"><a href="#contact" aria-label="Facebook"><svg><use href="#fb"/></svg></a><a href="#contact" aria-label="Instagram"><svg><use href="#ig"/></svg></a></div></div>
+<div><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#shop">Shop</a></li><li><a href="#personalize">Customize</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
+<div><h4>Contact</h4>hello@thegiftmuse.com<br>@TheGiftMuse<br>Mon–Sat, 10 AM–8 PM</div>
+</div><div class="disc">The Gift Muse is a fictional business created for a Digital Marketing course project.</div></div></footer>
+
+<script>
+const S=x=>`<svg viewBox="0 0 200 160">${x}</svg>`,G='#D9B382',D='#4A3440';
+const T=(t,y,s)=>`<text x="100" y="${y}" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="${s}" fill="${D}">${t}</text>`;
+const A={
+mug:S(`<path d="M142 60q34 4 30 30t-38 28" stroke="#fff" stroke-width="12" fill="none"/><rect x="52" y="40" width="90" height="98" rx="12" fill="#fff"/><text x="97" y="96" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="26" fill="#a07a3c">Sara</text>`),
+mug2:S(`<path d="M142 60q34 4 30 30t-38 28" stroke="#fff" stroke-width="12" fill="none"/><rect x="52" y="40" width="90" height="98" rx="12" fill="#fff"/><rect x="66" y="62" width="62" height="50" rx="4" fill="#F8D7DA"/><circle cx="97" cy="80" r="9" fill="#fff9f5"/><path d="M80 112q17-30 34 0z" fill="#fff9f5"/>`),
+frame:S(`<rect x="40" y="20" width="120" height="120" rx="4" fill="#a9794f"/><rect x="50" y="30" width="100" height="100" fill="#f8efe3"/><rect x="60" y="40" width="80" height="80" fill="#F8D7DA"/><circle cx="100" cy="68" r="13" fill="#fff9f5"/><path d="M72 120q28-38 56 0z" fill="#fff9f5"/>`),
+key:S(`<circle cx="100" cy="24" r="14" fill="none" stroke="${G}" stroke-width="4"/><path d="M100 38v18" stroke="${G}" stroke-width="4"/><rect x="62" y="56" width="76" height="76" rx="14" fill="${G}"/>${T('M',106,38)}`),
+neck:S(`<path d="M44 20q56 130 112 0" fill="none" stroke="${G}" stroke-width="3"/><path d="M100 118q-26-24-24-42 18-24 24-4 6-20 24 4 2 18-24 42z" fill="${G}"/>${T('Zoya',84,17)}`),
+hamper:S(`<path d="M40 70q60 40 120 0l-10 66H50z" fill="#c9985f"/><circle cx="70" cy="62" r="16" fill="#F8D7DA"/><rect x="92" y="30" width="22" height="44" rx="8" fill="#E6E0F8"/><circle cx="130" cy="58" r="14" fill="#DFF3EA"/><path d="M60 90l80 30M140 90l-80 30" stroke="#F8D7DA" stroke-width="5"/><circle cx="100" cy="104" r="8" fill="${G}"/>`),
+box:S(`<rect x="40" y="68" width="120" height="70" rx="5" fill="#e6b7c0"/><rect x="34" y="52" width="132" height="26" rx="5" fill="#F8D7DA"/><rect x="90" y="52" width="20" height="86" fill="${G}"/><path d="M100 52c-30-40-52-8-22 3zM100 52c30-40 52-8 22 3z" fill="${G}"/>`),
+cushion:S(`<rect x="36" y="30" width="128" height="100" rx="22" fill="#E6E0F8" stroke="${G}" stroke-width="2" stroke-dasharray="5 4"/>${T('Us',92,34)}`),
+candle:S(`<path d="M100 20q14 16 0 28q-14-12 0-28z" fill="${G}"/><rect x="58" y="56" width="84" height="76" rx="12" fill="#DFF3EA"/><rect x="70" y="80" width="60" height="30" rx="4" fill="#fff"/>${T('Eid',102,18)}`),
+tote:S(`<path d="M70 52q0-34 30-34t30 34" fill="none" stroke="#a9794f" stroke-width="5"/><rect x="44" y="50" width="112" height="92" rx="6" fill="#f4e7d4"/>${T('Dream',104,24)}`),
+journal:S(`<rect x="52" y="16" width="96" height="128" rx="8" fill="#C97B8B"/><rect x="132" y="16" width="8" height="128" fill="${G}"/><rect x="68" y="44" width="56" height="34" rx="4" fill="#fff9f5"/><text x="96" y="66" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="16" fill="${D}">Noor</text>`),
+keep:S(`<rect x="40" y="70" width="120" height="66" rx="8" fill="#a9794f"/><rect x="34" y="52" width="132" height="26" rx="8" fill="#c9985f"/><path d="M100 120q-18-14-16-26 12-14 16-2 4-12 16 2 2 12-16 26z" fill="#F8D7DA"/>`)};
+const P=[['Custom Photo Mug','Glossy ceramic mug with your photo and name.',1450,'Birthday,Couple Gifts','mug','Name + photo'],
+['Personalized Photo Frame','Warm wood frame with engraved names.',2200,'Wedding & Anniversary,Couple Gifts','frame','Photo + names'],
+['Engraved Keychain','Gold-tone keychain engraved by hand.',950,'Graduation,Corporate Gifts','key','Initial or name'],
+['Name Necklace','Delicate gold-tone necklace with your name.',3500,'Eid,Birthday','neck','Name in script'],
+['Birthday Gift Hamper','Curated treats in a ribbon-tied basket.',5800,'Birthday','hamper','Card message'],
+['Anniversary Gift Box','Keepsakes wrapped in a satin-ribbon box.',4200,'Wedding & Anniversary,Couple Gifts','box','Date + note'],
+['Personalized Cushion','Soft cushion with a photo or a quote.',2800,'Wedding & Anniversary,Couple Gifts','cushion','Photo or quote'],
+['Scented Candle Jar','Hand-poured candle with a custom label.',1800,'Eid,Birthday','candle','Custom label'],
+['Printed Tote Bag','Sturdy cotton tote with your name or quote.',1500,'Graduation,Corporate Gifts','tote','Name or quote'],
+['Custom Journal','Hardcover journal with a name on the cover.',1650,'Graduation,Corporate Gifts','journal','Cover name'],
+['Keepsake Box','Wooden box with an engraved heart lid.',3200,'Wedding & Anniversary','keep','Engraved lid'],
+['Couple Mug Set','Two matching mugs with photo prints.',2600,'Couple Gifts,Wedding & Anniversary','mug2','Names + photos'],
+['Eid Gift Hamper','Festive hamper with sweets and a greeting card.',6200,'Eid,Corporate Gifts','hamper','Greeting card']];
+const WA=t=>'https://wa.me/920000000000?text='+encodeURIComponent(t);
+const card=(p,i)=>`<article class="card"><div class="img">${A[p[4]]}</div><div class="body"><h3>${i===0?'<a href="#product">'+p[0]+'</a>':p[0]}</h3><p>${p[1]}</p><span class="opt">${p[5]}</span><div class="price">Rs. ${p[2].toLocaleString('en-US')}</div><a class="btn sm" target="_blank" rel="noopener" href="${WA('Hi! I would like to order: '+p[0])}">Order Now</a></div></article>`;
+const $=id=>document.getElementById(id);
+$('feat').innerHTML=P.slice(0,6).map(card).join('');
+$('related').innerHTML=P.slice(1,5).map((p,i)=>card(p,i+1)).join('');
+const cats=['All Gifts','Birthday','Wedding & Anniversary','Eid','Graduation','Couple Gifts','Corporate Gifts'];
+function shop(c){$('filters').innerHTML=cats.map(x=>`<button class="${x===c?'on':''}" data-c="${x}">${x}</button>`).join('');
+$('shopgrid').innerHTML=P.map((p,i)=>[p,i]).filter(([p])=>c==='All Gifts'||p[3].split(',').includes(c)).map(([p,i])=>card(p,i)).join('')}
+$('filters').onclick=e=>{if(e.target.dataset.c)shop(e.target.dataset.c)};shop('All Gifts');
+const IC={heart:'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',pen:'<path d="M4 20l1-4L16 5l3 3L8 19z"/>',truck:'<path d="M2 7h12v9H2zM14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/>',gift:'<rect x="3" y="9" width="18" height="11" rx="1"/><path d="M2 6h20v3H2zM12 6v14M12 6c-3-4-6-1-4 0M12 6c3-4 6-1 4 0"/>',star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',spark:'<path d="M12 3v5M12 16v5M3 12h5M16 12h5M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/>'};
+const ic=k=>`<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">${IC[k]}</svg>`;
+const why=[['heart','Handmade With Care'],['pen','Personalized Designs'],['truck','Fast Delivery'],['gift','Gift Wrapping Available']];
+document.querySelector('#pg-home .why').innerHTML=why.map(w=>`<div>${ic(w[0])}<h3>${w[1]}</h3></div>`).join('');
+$('vals').innerHTML=[['heart','Thoughtfulness'],['star','Quality'],['spark','Creativity'],['gift','Care']].map(w=>`<div>${ic(w[0])}<h3>${w[1]}</h3></div>`).join('');
+const st=['Choose your gift','Share your personalization details','Approve the design','Receive your beautifully packed gift'];
+document.querySelectorAll('.steps').forEach(e=>e.innerHTML=st.map((s,i)=>`<div><div class="num">${i+1}</div><h3>${s}</h3></div>`).join(''));
+$('faqs').innerHTML=[['Can I customize any gift?','Yes. Most gifts can carry a name, photo, date or short message. Share your details and we’ll send a preview for approval.'],
+['How long does delivery take?','Orders usually arrive 3–5 working days after you approve the design.'],
+['What payment methods do you accept?','Cash on delivery and bank transfer. This fictional shop has no real payment gateway.'],
+['Do you offer gift wrapping?','Yes. Add gift wrapping and a handwritten card to any order.'],
+['Do you take bulk orders?','Yes, for weddings, Eid and corporate gifting. Contact us for a custom quote.'],
+['What is your return policy?','Personalized items can’t be returned, but if something arrives damaged or incorrect, we’ll remake it.']].map(q=>`<details class="q"><summary>${q[0]}</summary><p>${q[1]}</p></details>`).join('');
+$('main').innerHTML=A.mug;
+$('thumbs').innerHTML=['mug','mug2','box'].map((k,i)=>`<button class="${i?'':'on'}" data-k="${k}" aria-label="View ${i+1}">${A[k]}</button>`).join('');
+$('thumbs').onclick=e=>{const b=e.target.closest('button');if(!b)return;$('main').innerHTML=A[b.dataset.k];[...$('thumbs').children].forEach(x=>x.classList.toggle('on',x===b))};
+document.querySelectorAll('.wa').forEach(a=>a.href=WA('Hi The Gift Muse! I would like a personalized gift.'));
+function done(f){f.querySelector('.ok').hidden=false;return false}
+const pages=['home','shop','product','personalize','about','faq','contact'];
+function route(){let h=location.hash.slice(1);if(!pages.includes(h))h='home';
+pages.forEach(p=>$('pg-'+p).hidden=p!==h);
+document.querySelectorAll('.links a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+(h==='product'?'shop':h)));scrollTo(0,0)}
+addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
